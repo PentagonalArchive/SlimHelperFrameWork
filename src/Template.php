@@ -445,7 +445,10 @@ class Template implements \ArrayAccess
             ),
             is_array($template) ? $template : (
                 is_array($extra_data) ? $extra_data : (
-                    is_array($response) ? $response : []
+                    is_array($response) ? $response :
+                        (
+                            is_array($response) ? $response : []
+                        )
                 )
             ),
             $template instanceof ResponseInterface ? $template : (
