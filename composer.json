@@ -5,7 +5,7 @@
   "license": "MIT",
   "require": {
     "php": ">=5.6",
-    "slim/slim": "^3.5",
+    "slim/slim": "^3",
     "aura/session": "^2.0",
     "doctrine/dbal": "^2.5",
     "guzzlehttp/guzzle": "~6.0",
