@@ -57,6 +57,6 @@ This directory contains Bunch of applications
 
 ```bash
 
-composer require pentagonal\slimhelper
+composer require pentagonal/slimhelper
 
 ```
