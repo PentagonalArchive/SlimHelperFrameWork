@@ -1,0 +1,32 @@
+{
+  "name": "pentagonal/slimhelper",
+  "description": "Project Slim Helper Pentagonal",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.6",
+    "slim/slim": "^3.5",
+    "aura/session": "^2.0",
+    "doctrine/dbal": "^2.5",
+    "guzzlehttp/guzzle": "~6.0",
+    "monolog/monolog": "^1.22",
+    "gettext/gettext": "^4.1"
+  },
+  "require-dev" : {
+    "squizlabs/php_codesniffer": "2.*"
+  },
+  "suggest": {
+    "pentagonal/phpass" : "used for password hashing library"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pentagonal\\SlimHelper\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Pentagonal",
+      "email": "org@pentagonal.org"
+    }
+  ]
+}
