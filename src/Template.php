@@ -438,17 +438,14 @@ class Template implements \ArrayAccess
             $response = func_get_arg(2);
         }
         $arguments = [
-            $template = is_string($template) ? $template : (
+            is_string($template) ? $template : (
                 is_string($extra_data) ? $extra_data : (
                     is_string($response) ? $response : null
                 )
             ),
             is_array($template) ? $template : (
                 is_array($extra_data) ? $extra_data : (
-                    is_array($response) ? $response :
-                        (
-                            is_array($response) ? $response : []
-                        )
+                    is_array($response) ? $response : []
                 )
             ),
             $template instanceof ResponseInterface ? $template : (
@@ -459,7 +456,6 @@ class Template implements \ArrayAccess
                 )
             ),
         ];
-
         $template   =& $arguments[0];
         $extra_data =& $arguments[1];
         $response   =& $arguments[2];
