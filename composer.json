@@ -16,7 +16,8 @@
     "squizlabs/php_codesniffer": "2.*"
   },
   "suggest": {
-    "pentagonal/phpass" : "used for password hashing library"
+    "pentagonal/phpass" : "used for password hashing library",
+    "pentagonal/hookable" : "used for easily use hooks method"
   },
   "autoload": {
     "psr-4": {

@@ -1,5 +1,6 @@
-## Base Application Collection PSR7 & Database + Cache Extended
-## uses Slim 3
+## Base Application Collection PSR7 - Slim 3
+
+[![Build Status](https://travis-ci.org/pentagonal/SlimHelperFrameWork.svg?branch=master)](https://travis-ci.org/pentagonal/SlimHelperFrameWork)
 
 This directory contains Bunch of applications
 
