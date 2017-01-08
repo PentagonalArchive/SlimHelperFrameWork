@@ -839,7 +839,7 @@ class ImageResize
         $dir_name = dirname($savePath);
         if (!$dir_name || !is_dir($dir_name)) {
             throw new \Exception(
-                'Directory Target Does not exist. Resource image resize cleared.',
+                'Directory Target Does not exist.',
                 E_USER_WARNING
             );
         }
@@ -1032,11 +1032,26 @@ class ImageResize
             if (!$overwrite) {
                 return false;
             }
+
+            if (!is_writable($savePath)) {
+                throw new \Exception(
+                    'File exist! And could not to be replace',
+                    E_USER_WARNING
+                );
+            }
         }
 
-        if (!is_writable($savePath)) {
+        $dir_name = dirname($savePath);
+        if (!$dir_name || !is_dir($dir_name)) {
             throw new \Exception(
-                'Target file exist! could not to be replace',
+                'Directory Target Does not exist.',
+                E_USER_WARNING
+            );
+        }
+
+        if (!is_writable($dir_name)) {
+            throw new \Exception(
+                'Directory Target is not writable. Please check directory permission.',
                 E_USER_WARNING
             );
         }
