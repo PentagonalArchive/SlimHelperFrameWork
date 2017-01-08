@@ -920,7 +920,9 @@ class ImageResize
                 $path = is_file($savePath) && realpath($savePath) ? realpath($savePath) : $savePath;
                 $this->image_resized->getImage();
                 $ret_val = $this->image_resized->writeImageFile($fp);
-                @fclose($fp);
+                if (!empty($fp)) {
+                    @fclose($fp);
+                }
             } else {
                 $ret_val = true;
                 $path = $this->image_resized->getImageBlob();
@@ -1112,10 +1114,10 @@ class ImageResize
                         E_USER_WARNING
                     );
                 }
+                $ret_val = $image_source->writeImageFile($fp);
                 if (!empty($fp)) {
                     @fclose($fp);
                 }
-                $ret_val = $image_source->writeImageFile($fp);
                 $path   = is_file($savePath) && realpath($savePath) ? realpath($savePath) : $savePath;
             } else {
                 $ret_val = true;
