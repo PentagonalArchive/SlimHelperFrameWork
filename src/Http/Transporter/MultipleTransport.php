@@ -4,6 +4,7 @@ namespace Pentagonal\SlimHelper\Http\Transporter;
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Cookie\SessionCookieJar;
+use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Pool;
 use Pentagonal\SlimHelper\Record\Arrays\CollectionSortable;
 use Psr\Http\Message\ResponseInterface;
@@ -151,7 +152,7 @@ class MultipleTransport
      * Sending Transport Batch Pool
      *
      * @param null|Transport|Client $transport
-     * @return CollectionSortable|Transport[]|\Exception[]
+     * @return CollectionSortable|Transport[]|RequestException[]|\Exception[]
      */
     public function send($transport = null)
     {
