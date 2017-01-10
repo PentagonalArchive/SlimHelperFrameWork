@@ -4,6 +4,7 @@ namespace Pentagonal\SlimHelper\Http\Transporter;
 use GuzzleHttp\Client;
 use GuzzleHttp\Cookie\CookieJar;
 use GuzzleHttp\Cookie\SessionCookieJar;
+use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Pool;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
@@ -247,7 +248,7 @@ class Transport
      *                                      null to fallback default
      * @param string|UriInterface       $uri    Url target
      * @param array                     $config Configurations
-     * @return \Psr\Http\Message\ResponseInterface|\Exception
+     * @return \Psr\Http\Message\ResponseInterface|RequestException|\Exception
      */
     public function send($method = null, $uri = null, array $config = [])
     {
