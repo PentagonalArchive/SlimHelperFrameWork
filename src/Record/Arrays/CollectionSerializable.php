@@ -40,7 +40,7 @@ class CollectionSerializable extends Collection implements
     /**
      * Returning Encoded Json
      *
-     * @return string
+     * @return array
      */
     public function jsonSerialize()
     {
