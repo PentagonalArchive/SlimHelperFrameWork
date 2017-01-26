@@ -44,6 +44,6 @@ class CollectionSerializable extends Collection implements
      */
     public function jsonSerialize()
     {
-        return json_encode($this->all());
+        return $this->all();
     }
 }
