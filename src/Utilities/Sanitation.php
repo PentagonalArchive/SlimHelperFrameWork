@@ -183,11 +183,11 @@ class Sanitation
         }
 
         /**
-         * Work Safe with Parse 4096 Bit | 4KB data split for regex callback & safe memory usage
+         * Work Safe with Parse 2048 Bit | 2KB data split for regex callback & safe memory usage
          * that maybe fail on very long string
          */
-        if (strlen($mixed) > 4096) {
-            return implode('', self::multiByteEntities(str_split($mixed, 4096), $entity));
+        if (strlen($mixed) > 2048) {
+            return implode('', self::multiByteEntities(str_split($mixed, 2048), $entity));
         }
 
         if ($entity) {
