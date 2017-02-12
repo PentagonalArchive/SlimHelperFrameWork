@@ -251,7 +251,6 @@ class Database
      */
     public function getConnection()
     {
-        http://api.dev/
         return $this->currentConnection;
     }
 
